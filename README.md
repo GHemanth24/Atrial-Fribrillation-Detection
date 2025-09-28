@@ -1,3 +1,6 @@
+**Atrial-Fribrillation-Detection**
+
+
 ## 📌 Overview
 
 This is a Machine Learning + Web Application project built during my training. With proper guidance and self-learning, I developed and customized this project according to what I thought would be more practical and useful from the user’s perspective.
