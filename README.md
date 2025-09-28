@@ -1,4 +1,4 @@
-## Atrial-Fribrillation-Detection**
+## Atrial-Fribrillation-Detection
 
 
 ## 📌 Overview
