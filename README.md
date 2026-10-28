@@ -1,79 +1,76 @@
-## Atrial-Fribrillation-Detection
-
+# Atrial Fibrillation Detection
 
 ## 📌 Overview
 
-This is a Machine Learning + Web Application project built during my training. With proper guidance and self-learning, I developed and customized this project according to what I thought would be more practical and useful from the user’s perspective.
+Atrial Fibrillation Detection is a Machine Learning and web application project developed during my training. With proper guidance and self-learning, I developed and customized the project to make it more practical and user-friendly.
 
-This application is designed to take **medical images and patient data as inputs**, process them using a trained ML/DL model, and display structured outputs via a **web-based interface**. It is fully responsive and can be operated from any device.
+The application processes medical images and patient-related data using a machine learning model and presents the results through a web-based interface.
 
----
+## 🛠️ Tech Stack
 
-## 🛠 Tech Stack
+- **Frontend:** HTML, CSS, Bootstrap, JavaScript
+- **Backend:** Python, Flask
+- **Machine Learning:** Model training and prediction using the libraries implemented in the project
+- **Data Processing:** Pandas, NumPy (where applicable)
+- **Dataset:** CSV dataset and sample medical images
 
-* **Frontend:** HTML, CSS, Bootstrap, JavaScript
-* **Backend:** Python (Flask/Django depending on implementation), AJAX
-* **Database:** CSV / MySQL (for patient data)
-* **ML/DL Frameworks:** TensorFlow / PyTorch (model training & inference)
+## ✨ Features
 
----
+### 1. Image Upload
+- Allows users to upload medical images for processing.
+- Provides an interface for entering patient-related data.
+- Supports sample inputs for testing the application.
 
-## ✨ Functionalities
+### 2. Image Processing and Prediction
+- Uses `imageCheck.py` to verify and process uploaded images.
+- Uses `model.py` to perform model-related processing and generate predictions.
+- Displays the prediction results through the web interface.
 
-### 1. **Home / Upload Page**
+### 3. Results Display
+- Presents prediction results in a structured format.
+- Displays relevant patient information alongside the results.
+- Includes sample output screenshots in the `Output/` directory.
 
-* Allows users to upload medical images for analysis.
-* Patient data can also be provided for reference.
-* Clean and responsive UI for easy interaction.
+### 4. Model Training
+- Includes `training.ipynb` for model training.
+- Uses a CSV dataset for training and evaluation.
+- Allows experimentation with the dataset and model configuration.
 
-### 2. **Image Processing & Prediction**
+## 📂 Dataset
 
-* Uploaded images are verified and processed by `imageCheck.py`.
-* `model.py` runs the trained ML/DL model to generate predictions.
-* Dynamic output generation, shown immediately to the user.
+The dataset is large, so it is hosted externally on Google Drive instead of being stored directly in this GitHub repository.
 
-### 3. **Results / Output Page**
+**Dataset download link:**
 
-* Displays processed results in a clean format.
-* Shows prediction outcomes alongside patient information.
-* Includes visual samples, as seen in screenshots under `Output/`.
+[Download the Atrial Fibrillation Detection Dataset from Google Drive](https://drive.google.com/file/d/1aVs1JFG1C0AP6svyWmhqFFHLIjG_jmMz/view?usp=drive_link)
 
-### 4. **Training Module**
+**Instructions:**
+1. Open the Google Drive link.
+2. Download the dataset file.
+3. Extract it if it is provided as a ZIP archive.
+4. Place the dataset in the appropriate project directory.
+5. Update the dataset path in the training notebook or application if necessary.
 
-* `training.ipynb` allows training the ML/DL model with custom datasets.
-* Uses `Inputs/Dataset/dataset1.csv` for structured training data.
-* Model can be re-trained and updated for improved accuracy.
+Make sure the Google Drive sharing permissions allow users to access the file.
 
-### 5. **Dashboard (if extended)**
+## 📁 Project Structure
 
-* Registered/logged-in users can manage patient records.
-* Track past analyses and view previously uploaded results.
-* Dynamic updates whenever images are liked/marked (optional extension).
-
-### 6. **Error Handling & Responsiveness**
-
-* Every exception is handled gracefully with proper UI messages.
-* The web application is fully responsive and mobile-friendly.
-
----
-
-## 📂 Project Structure
-
-```
+```text
 Major_Project/
 │
 ├── Execution Logic/
-│   ├── app1_final.py          # Main application script
-│   ├── imageCheck.py          # Image verification/processing
-│   ├── model.py               # Model definition and logic
-│   └── index.html             # Web interface
+│   ├── app1_final.py
+│   ├── imageCheck.py
+│   ├── model.py
+│   └── index.html
 │
 ├── Training/
-│   └── training.ipynb         # Notebook for training the ML/DL model
+│   └── training.ipynb
 │
 ├── Inputs/
-│   ├── Sample Images for Input/   # Example test images
-│   └── Dataset/dataset1.csv       # Dataset used for training/testing
+│   ├── Sample Images for Input/
+│   └── Dataset/
+│       └── dataset1.csv  (download separately)
 │
 ├── Output/
 │   ├── Image Upload.png
@@ -81,51 +78,69 @@ Major_Project/
 │   ├── Sample Output1.png
 │   └── Sample Output2.png
 │
-└── Major Project Documentation.docx  # Detailed documentation report
+└── Major Project Documentation.docx
 ```
-
----
 
 ## ⚙️ Installation
 
-1. Clone or extract the project.
-2. Install dependencies (Python 3.x required):
+### Prerequisites
+- Python 3.x
+- Git
+- Required Python libraries used by the project
 
-   ```bash
-   pip install -r requirements.txt
-   ```
+### 1. Clone the Repository
 
-   *(If `requirements.txt` is not provided, install libraries used in `model.py` and `training.ipynb`, e.g. TensorFlow/PyTorch, Flask, NumPy, Pandas, etc.)*
+```bash
+git clone YOUR_GITHUB_REPOSITORY_URL
+cd YOUR_PROJECT_FOLDER
+```
 
----
+Replace the example placeholders with your actual GitHub repository URL and project folder name.
 
-## ▶️ Running the Project
+### 2. Install Dependencies
 
-1. **Training (optional):**
+If the repository contains a `requirements.txt` file, run:
 
-   * Open `Training/training.ipynb` in Jupyter Notebook.
-   * Run all cells to train the model on `dataset1.csv`.
-   * Save the trained model for use in the execution logic.
+```bash
+pip install -r requirements.txt
+```
 
-2. **Execution:**
+Otherwise, install the libraries required by the application and training notebook.
 
-   * Run the main app:
+### 3. Download the Dataset
 
-     ```bash
-     python app1_final.py
-     ```
-   * Open `index.html` in a browser or follow the Flask/Django server link (depending on implementation).
-   * Upload sample images from `Inputs/Sample Images for Input/`.
-   * View the output as shown in the screenshots under `Output/`.
+Download the dataset from the Google Drive link in the Dataset section and place it in the expected directory.
 
----
+### 4. Run the Application
 
-## 📊 Inputs & Outputs
+Navigate to the directory containing `app1_final.py` and run:
 
-* **Inputs:** CSV dataset + sample images
-* **Outputs:** Prediction results with patient data & processed image outputs
+```bash
+python app1_final.py
+```
 
----
+If the application starts a local Flask server, open the local URL displayed in the terminal.
 
+### 5. Test the Application
 
+- Upload a sample medical image.
+- Provide the required input data.
+- View the generated prediction results.
 
+Follow the dataset paths and model-loading requirements defined in the project code.
+
+## 📊 Input and Output
+
+**Inputs**
+- Medical images
+- Patient-related data, where required
+- Dataset used for model training and evaluation
+
+**Outputs**
+- Model-generated prediction results
+- Processed input information
+- Results displayed through the web interface
+
+## ⚠️ Disclaimer
+
+This project is intended for educational and research purposes only. Its predictions should not be used as a substitute for professional medical advice, diagnosis, or treatment.
